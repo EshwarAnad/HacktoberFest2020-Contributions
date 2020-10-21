@@ -35,7 +35,7 @@ void push(struct Node** head_ref, int new_data)
 /* A utility function to print linked list */
 void printList(struct Node *node) 
 { 
-    while (node != NULL) 
+    while (node) 
     { 
         printf("%d ", node->data); 
         node = node->next; 
@@ -46,7 +46,7 @@ void printList(struct Node *node)
 // Returns the last node of the list 
 struct Node *getTail(struct Node *cur) 
 { 
-    while (cur != NULL && cur->next != NULL) 
+    while (cur && cur->next) 
         cur = cur->next; 
     return cur; 
 } 
